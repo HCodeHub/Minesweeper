@@ -4,7 +4,6 @@
 
 #include "Graphics.h" // Xử lý, hiển thị hình ảnh
 #include <QString> // cung cấp một chuỗi ký tự Unicode
-#include <QStandardPaths> // cung cấp các phương thức để truy cập các đường dẫn chuẩn(android).
 
 class Setting
 {
@@ -33,9 +32,9 @@ private:
     Vei2 ScreenToGrid(const Vei2& screenPos) const; // convert tọa độ màn hình sang tọa độ lưới
     void FileSaveSetting(); // Gán dữ liệu file vào setting
 private:
+    const QString jsonSetting;
     Vei2 topLeft; // góc trên trái
-    Button button[20]; // số ô setting
-    const QString jsonSetting = QStandardPaths::writableLocation(QStandardPaths::DownloadLocation) + "/Minesweeper.json"; // Lưu đường dẫn file
+    Button button[20]; // số ô setting    
 
     int width = 5; // Số ô setting
     int height = 4;
@@ -45,5 +44,3 @@ private:
 };
 
 #endif // SETTING_H
-
-//int sizeHeight = 70;

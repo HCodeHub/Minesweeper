@@ -4,6 +4,7 @@
 #include <QFile> // Cung cấp một giao diện để đọc và ghi vào tệp.
 #include <QJsonDocument> // Cung cấp một cách để đọc và viết các tài liệu JSON.
 #include <QJsonObject> // Đóng gói một đối tượng JSON.
+#include <QStandardPaths> // cung cấp các phương thức để truy cập các đường dẫn chuẩn(android).
 
 int memeWidth = 15; // số ô meme
 int memeHeight = 15;
@@ -11,8 +12,10 @@ int memeBom = 30;
 
 Setting::Setting(const Vei2 &center)
     : // danh sách khởi tạo
-      topLeft(center.x  + SpriteCodex::borderThickness, center.y  + SpriteCodex::borderThickness + SpriteCodex::buttonSizeH) // tọa độ + đường viền + chiều cao button
+      jsonSetting(QStandardPaths::writableLocation(QStandardPaths::DownloadLocation) + "/Minesweeper.json") // Lưu đường dẫn file
+    , topLeft(center.x  + SpriteCodex::borderThickness, center.y  + SpriteCodex::borderThickness + SpriteCodex::buttonSizeH) // tọa độ + đường viền + chiều cao button
 {
+
     FileSaveSetting();  // Gán dữ liệu file vào setting
 }
 
