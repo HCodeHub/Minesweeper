@@ -30,5 +30,3 @@ private:
 };
 
 #endif // MOUSE_H
-
-//Q_OBJECT // macro signal and slost

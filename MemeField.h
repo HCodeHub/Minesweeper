@@ -27,34 +27,34 @@ private:
             Revealed // Lộ
         };
     public:
-        void SpawnMeme(); // Meme đẻ trứng
-        bool HasMeme() const; // Trả về Meme có hay không
-        void Draw(const Vei2& screenPos, MemeField::State fieldState, Graphics& gfx) const; // vẽ
-        void Reveal(); // chuyển trạng thái lộ
-        bool IsRevealed() const; // trả về true nếu trạng thái lộ
-        void ToggleFlag(); // gắn hoặc ẩn cờ
-        bool IsFlagged() const; // kiểm tra cờ
-        bool HasNoNeighborMemes() const; // không có memes hàng xóm
-        void SetNeighborMemeCount(int memeCount); // Đặt số lượng meme hàng xóm
+        void SpawnMeme (); // Meme đẻ trứng
+        bool HasMeme () const; // Trả về Meme có hay không
+        void Draw (const Vei2& screenPos, MemeField::State fieldState, Graphics& gfx) const; // vẽ
+        void Reveal (); // chuyển trạng thái lộ
+        bool IsRevealed () const; // trả về true nếu trạng thái lộ
+        void ToggleFlag (); // gắn hoặc ẩn cờ
+        bool IsFlagged () const; // kiểm tra cờ
+        bool HasNoNeighborMemes () const; // không có memes hàng xóm
+        void SetNeighborMemeCount (int memeCount); // Đặt số lượng meme hàng xóm
     private:
         State state = State::Hidden; // Tình trạng hiện tại ẩn
         bool hasMeme = false; // meme hiện tại = false
         int nNeighborMemes = -1; // Đếm số bom, hàng xóm.
     };
 public:
-    MemeField(const Vei2& center, const int &width, const int &height, const int &nMemes); // khởi tạo số lượng meme(bom)
-    void Draw(Graphics& gfx); // Vẽ tại vị trí trong mảng 1d
-    RectI GetRect() const; // Trả về hình chữ nhật
-    void OnRevealClick(const Vei2& mousePos); // Tiết lộ khi nhấn chuột trái
-    void OnFlagClick(const Vei2& screenPos); // Gắn cờ khi nhấn chột phải
-    State GetState() const; // Trả về trạng thái
+    MemeField (const Vei2& center, const int &width, const int &height, const int &nMemes); // khởi tạo số lượng meme(bom)
+    void Draw (Graphics& gfx); // Vẽ tại vị trí trong mảng 1d
+    RectI GetRect () const; // Trả về hình chữ nhật
+    void OnRevealClick (const Vei2& mousePos); // Tiết lộ khi nhấn chuột trái
+    void OnFlagClick (const Vei2& screenPos); // Gắn cờ khi nhấn chột phải
+    State GetState () const; // Trả về trạng thái
 private:
-    void RevealTile(const Vei2& gridPos); // Tiết lộ gạch, tàu quét mìn
-    Tile& TileAt(const Vei2& gridPos); // Trả về tọa độ gạch
-    const Tile &TileAt(const Vei2& gridPos) const; // overloaded
-    Vei2 ScreenToGrid(const Vei2& screenPos); // convert tọa độ màn hình sang tạo độ lưới
-    int CountNeighborMemes(const Vei2& gridPos); // Đếm các memes hàng xóm(xung quanh gạch được mở)
-    bool GameIsWon() const; // Trả về true nếu thắng
+    void RevealTile (const Vei2& gridPos); // Tiết lộ gạch, tàu quét mìn
+    Tile& TileAt (const Vei2& gridPos); // Trả về tọa độ gạch
+    const Tile &TileAt (const Vei2& gridPos) const; // overloaded
+    Vei2 ScreenToGrid (const Vei2& screenPos); // convert tọa độ màn hình sang tạo độ lưới
+    int CountNeighborMemes (const Vei2& gridPos); // Đếm các memes hàng xóm(xung quanh gạch được mở)
+    bool GameIsWon () const; // Trả về true nếu thắng
 
 private:
     int width = 17; // số lượng ô meme theo chiều ngang

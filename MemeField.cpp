@@ -2,7 +2,6 @@
 #include "SpriteCodex.h" // chứa code pixed
 #include <assert.h> // cung cấp macro gọi là assert có thể được sử dụng để kiểm tra một giả định được tạo bởi chương trình và in một thông báo chẩn đoán tìm lỗi nếu giả định này là false.
 #include <random> // Thư viện số ngẫu nhiên cung cấp các lớp tạo số ngẫu nhiên và giả ngẫu nhiên.
-//#include <algorithm> // Thư viện thuật toán định nghĩa các hàm cho nhiều mục đích khác nhau (ví dụ: tìm kiếm, sắp xếp, đếm, thao tác) hoạt động trên phạm vi phần tử.
 
 void MemeField::Tile::SpawnMeme()
 {

@@ -4,82 +4,82 @@
 
 void SpriteCodex::DrawWin(const Vei2 &pos, Graphics &gfx)
 {
-    DrawWon(pos, gfx); // Vẽ màn hình chiến thắng
+    DrawWon (pos, gfx); // Vẽ màn hình chiến thắng
 }
 
 void SpriteCodex::DrawTile0(const Vei2 &pos, Graphics &gfx)
-{
-    gfx.getPaint()->drawImage(QPoint(pos.x, pos.y), QImage(":/Image/tile0.png"));  // Xây dựng một hình ảnh và cố gắng tải hình ảnh từ tệp với tên tệp đã cho.
+{    
+    gfx.DrawImage (pos, ":/Image/tile0.png"); // Vẽ ảnh tại tọa độ
 }
 
 void SpriteCodex::DrawTile1(const Vei2 &pos, Graphics &gfx)
 {
-    gfx.getPaint()->drawImage(QPoint(pos.x, pos.y), QImage(":/Image/tile1.png"));  // Xây dựng một hình ảnh và cố gắng tải hình ảnh từ tệp với tên tệp đã cho.
+    gfx.DrawImage (pos, ":/Image/tile1.png"); // Vẽ ảnh tại tọa độ
 }
 
 void SpriteCodex::DrawTile2(const Vei2 &pos, Graphics &gfx)
 {
-    gfx.getPaint()->drawImage(QPoint(pos.x, pos.y), QImage(":/Image/tile2.png"));  // Xây dựng một hình ảnh và cố gắng tải hình ảnh từ tệp với tên tệp đã cho.
+    gfx.DrawImage (pos, ":/Image/tile2.png"); // Vẽ ảnh tại tọa độ
 }
 
 void SpriteCodex::DrawTile3(const Vei2 &pos, Graphics &gfx)
 {
-    gfx.getPaint()->drawImage(QPoint(pos.x, pos.y), QImage(":/Image/tile3.png"));  // Xây dựng một hình ảnh và cố gắng tải hình ảnh từ tệp với tên tệp đã cho.
+    gfx.DrawImage (pos, ":/Image/tile3.png"); // Vẽ ảnh tại tọa độ
 }
 
 void SpriteCodex::DrawTile4(const Vei2 &pos, Graphics &gfx)
 {
-    gfx.getPaint()->drawImage(QPoint(pos.x, pos.y), QImage(":/Image/tile4.png"));  // Xây dựng một hình ảnh và cố gắng tải hình ảnh từ tệp với tên tệp đã cho.
+    gfx.DrawImage (pos, ":/Image/tile4.png"); // Vẽ ảnh tại tọa độ
 }
 
 void SpriteCodex::DrawTile5(const Vei2 &pos, Graphics &gfx)
 {
-    gfx.getPaint()->drawImage(QPoint(pos.x, pos.y), QImage(":/Image/tile5.png"));  // Xây dựng một hình ảnh và cố gắng tải hình ảnh từ tệp với tên tệp đã cho.
+    gfx.DrawImage (pos, ":/Image/tile5.png"); // Vẽ ảnh tại tọa độ
 }
 
 void SpriteCodex::DrawTile6(const Vei2 &pos, Graphics &gfx)
 {
-    gfx.getPaint()->drawImage(QPoint(pos.x, pos.y), QImage(":/Image/tile6.png"));  // Xây dựng một hình ảnh và cố gắng tải hình ảnh từ tệp với tên tệp đã cho.
+    gfx.DrawImage (pos, ":/Image/tile6.png"); // Vẽ ảnh tại tọa độ
 }
 
 void SpriteCodex::DrawTile7(const Vei2 &pos, Graphics &gfx)
 {
-    gfx.getPaint()->drawImage(QPoint(pos.x, pos.y), QImage(":/Image/tile7.png"));  // Xây dựng một hình ảnh và cố gắng tải hình ảnh từ tệp với tên tệp đã cho.
+    gfx.DrawImage (pos, ":/Image/tile7.png"); // Vẽ ảnh tại tọa độ
 }
 
 void SpriteCodex::DrawTile8(const Vei2 &pos, Graphics &gfx)
 {
-    gfx.getPaint()->drawImage(QPoint(pos.x, pos.y), QImage(":/Image/tile8.png"));  // Xây dựng một hình ảnh và cố gắng tải hình ảnh từ tệp với tên tệp đã cho.
+    gfx.DrawImage (pos, ":/Image/tile8.png"); // Vẽ ảnh tại tọa độ
 }
 
 void SpriteCodex::DrawTileButton(const Vei2 &pos, Graphics &gfx)
 {
-    gfx.getPaint()->drawImage(QPoint(pos.x, pos.y), QImage(":/Image/tileButton.png"));  // Xây dựng một hình ảnh và cố gắng tải hình ảnh từ tệp với tên tệp đã cho.
+    gfx.DrawImage (pos, ":/Image/tileButton.png"); // Vẽ ảnh tại tọa độ
 }
 
 void SpriteCodex::DrawTileCross(const Vei2 &pos, Graphics &gfx)
 {
-    gfx.getPaint()->drawImage(QPoint(pos.x, pos.y), QImage(":/Image/tileCross.png"));  // Xây dựng một hình ảnh và cố gắng tải hình ảnh từ tệp với tên tệp đã cho.
+    gfx.DrawImage (pos, ":/Image/tileCross.png"); // Vẽ ảnh tại tọa độ
 }
 
 void SpriteCodex::DrawTileFlag(const Vei2 &pos, Graphics &gfx)
 {
-    gfx.getPaint()->drawImage(QPoint(pos.x, pos.y), QImage(":/Image/tileFlag.png"));  // Xây dựng một hình ảnh và cố gắng tải hình ảnh từ tệp với tên tệp đã cho.
+    gfx.DrawImage (pos, ":/Image/tileFlag.png"); // Vẽ ảnh tại tọa độ
 }
 
 void SpriteCodex::DrawTileBomb(const Vei2 &pos, Graphics &gfx)
 {
-    gfx.getPaint()->drawImage(QPoint(pos.x, pos.y), QImage(":/Image/tileBomb.png"));  // Xây dựng một hình ảnh và cố gắng tải hình ảnh từ tệp với tên tệp đã cho.
+    gfx.DrawImage (pos, ":/Image/tileBomb.png"); // Vẽ ảnh tại tọa độ
 }
 
 void SpriteCodex::DrawTileBombRed(const Vei2 &pos, Graphics &gfx)
 {
-    gfx.getPaint()->drawImage(QPoint(pos.x, pos.y), QImage(":/Image/tileBombRed.png"));  // Xây dựng một hình ảnh và cố gắng tải hình ảnh từ tệp với tên tệp đã cho.
+    gfx.DrawImage (pos, ":/Image/tileBombRed.png"); // Vẽ ảnh tại tọa độ
 }
 
 void SpriteCodex::DrawBackground(const Vei2 &pos, Graphics &gfx)
 {
-    gfx.getPaint()->drawImage(QPoint(pos.x, pos.y), QImage(":/Image/background.png")); // Vẽ nền đen che setting
+    gfx.DrawImage (pos, ":/Image/background.png"); // Vẽ ảnh tại tọa độ
 }
 
 void SpriteCodex::DrawTileNumber(const Vei2 & pos, int n, Graphics & gfx)
@@ -129,8 +129,7 @@ void SpriteCodex::DrawButtonOn(const Vei2 &pos, const int &index, Graphics &gfx)
     {
         fileName += "los.png";
     }
-    // QPainter. Vẽ hình ảnh đã cho tại điểm nhất định.
-    gfx.getPaint()->drawImage(QPoint(pos.x, pos.y), QImage(fileName));  // Xây dựng một hình ảnh và cố gắng tải hình ảnh từ tệp với tên tệp đã cho.
+    gfx.DrawImage (pos, fileName); // Vẽ ảnh tại tọa độ
 }
 
 void SpriteCodex::DrawButtonOff(const Vei2 &pos, const int &index, Graphics &gfx)
@@ -144,7 +143,7 @@ void SpriteCodex::DrawButtonOff(const Vei2 &pos, const int &index, Graphics &gfx
     {
         fileName += "playing.png";
     }
-    gfx.getPaint()->drawImage(QPoint(pos.x, pos.y), QImage(fileName));
+    gfx.DrawImage (pos, fileName); // Vẽ ảnh tại tọa độ
 }
 
 void SpriteCodex::DrawTimer(const Vei2 &pos, Graphics &gfx, const int &timer) // Vẽ thời gian
@@ -184,7 +183,7 @@ void SpriteCodex::DrawTimer(const Vei2 &pos, Graphics &gfx, const int &timer) //
         fileName += "frame9.png";
         break;
     }
-    gfx.getPaint()->drawImage(QPoint(pos.x, pos.y), QImage(fileName));
+    gfx.DrawImage (pos, fileName); // Vẽ ảnh tại tọa độ
 }
 
 void SpriteCodex::DrawSetting(const Vei2 &pos, Graphics &gfx, const int &indexW, const int &indexH) // Vẽ cài đặt
@@ -244,6 +243,6 @@ void SpriteCodex::DrawSetting(const Vei2 &pos, Graphics &gfx, const int &indexW,
     }
     if (fileName != ":/Image/") // nếu có file được chọn
     {
-        gfx.getPaint()->drawImage(QPoint(pos.x, pos.y), QImage(fileName));
+        gfx.DrawImage (pos, fileName); // Vẽ ảnh tại tọa độ
     }
 }

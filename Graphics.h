@@ -6,7 +6,7 @@
 #include "RectI.h" // Xử lý hình chữ nhật
 
 // Xử lý, hiển thị hình ảnh
-class Graphics //: public QWidget
+class Graphics
 {
 public:
     Graphics();    
@@ -22,10 +22,10 @@ public:
     {
         DrawRect(rect.left, rect.top, rect.right, rect.bottom, c);
     }
+    // Vẽ ảnh tại tọa độ
+    void DrawImage(const Vei2 &pos, const QString &fileName); // viết lại
 
-    void setPaint(QPainter &p); // Đặt họa sĩ vẽ
-    QPainter *getPaint(); // Trả về QPainter
-
+    void SetPaint(QPainter &p); // Đặt họa sĩ vẽ
 public:
     // nâng cấp tự động lấy kích thức màn hình
     static constexpr int ScreenWidth = 720; // Chiều rộng trương trình
@@ -36,9 +36,7 @@ private:
 
 #endif // GRAPHICS_H
 
-//Q_OBJECT // macro signal and slost
-
 /*
 void Paint(int x, int y, int r, int g, int b);
-void drawImage(const Vei2 &pos, const QString &fileName); // viết lại
 */
+//QPainter *getPaint(); // Trả về QPainter

@@ -5,6 +5,7 @@
 #include "Graphics.h" // Xử lý, hiển thị hình ảnh
 #include <QString> // cung cấp một chuỗi ký tự Unicode
 
+// Lưu và thay đổi trương trình
 class Setting
 {
 private:
