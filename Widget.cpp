@@ -88,32 +88,35 @@ void Widget::UpdateModel()
     }
 }
 
-    // Khung biên soạn(tạo mô hình), lặp lại sự kiện, vòng lặp
+// Khung biên soạn(tạo mô hình), lặp lại sự kiện, vòng lặp
 void Widget::ComposeFrame(Graphics &gfx)
 {
     if(button.GetState() != SelectButton::State::Setting) // nếu đang cài đặt thì ngừng chơi
-    {
-        if(checkLeftClick == true) // nếu đang nhấn thì làm mới
+    {        
+        if(resetBackground) // nếu ok cài đặt thì xóa nền
         {
-            if(resetBackground) // nếu ok cài đặt thì xóa nền
-            {
-                QRect rect = QGuiApplication::primaryScreen()->geometry(); // Thuộc tính này giữ hình học của màn hình tính bằng pixel // lấy kích thước màn hình
-                // Xóa khu vực bên trong hình "chữ nhật".
-                gfx.DrawRect(rect.x(), rect.y(), rect.width(), rect.height(), Qt::black); // Vẽ nền đen làm sạch màn hình
-                resetBackground = false;
-            }
-
-            field.Draw(gfx); // Vẽ cánh đồng meme
-            if (field.GetState() == MemeField::State::Winrar) // nếu trạng thái == win
-            {
-                SpriteCodex::DrawWin(field.GetRect().GetCenter(), gfx); // Vẽ màn hình kết thúc
-            }
-            checkLeftClick = false; // đặt lại
+            QRect rect = QGuiApplication::primaryScreen()->geometry(); // Thuộc tính này giữ hình học của màn hình tính bằng pixel // lấy kích thước màn hình
+            // Xóa khu vực bên trong hình "chữ nhật".
+            gfx.DrawRect(rect.x(), rect.y(), rect.width(), rect.height(), Qt::black); // Vẽ nền đen làm sạch màn hình
+            resetBackground = false;
         }
-    }else {
+
+        field.Draw(gfx); // Vẽ cánh đồng meme
+        if (field.GetState() == MemeField::State::Winrar) // nếu trạng thái == win
+        {
+            SpriteCodex::DrawWin(field.GetRect().GetCenter(), gfx); // Vẽ màn hình kết thúc
+        }
+
+        // fix nền đen, bỏ checkLeftClick
+        /*
+        if(checkLeftClick == true) {} // nếu đang nhấn thì làm mới
+            checkLeftClick = false; // đặt lại
+        */
+    }
+    else {
         setting.Draw(gfx); // vẽ setting
     }
-    button.Draw(gfx); // Vẽ button // không ảnh hưởng hiệu suất
+    button.Draw(gfx); // Vẽ button // không ảnh hưởng hiệu suất    
 }
 
 void Widget::Timers()
@@ -122,7 +125,7 @@ void Widget::Timers()
     repaint(); // gọi hàm paintEvent để vẽ lại widget
 }
 
-    // Trình xử lý sự kiện này, đối với sự kiện "mouseEvent", có thể được thực hiện lại trong một lớp con để nhận các sự kiện nhấn chuột cho cảnh.
+// Trình xử lý sự kiện này, đối với sự kiện "mouseEvent", có thể được thực hiện lại trong một lớp con để nhận các sự kiện nhấn chuột cho cảnh.
 void Widget::mousePressEvent(QMouseEvent *event) // nhận sự kiện giữ chuột
 {
     Mouse::Type type; // Sự kiện nhấn chuột
@@ -142,7 +145,7 @@ void Widget::mousePressEvent(QMouseEvent *event) // nhận sự kiện giữ chu
     repaint(); // Làm mới đồ họa mỗi khi chuột được nhấn /// gọi hàm paintEvent để vẽ lại widget // lưu ý: dùng trong hàm paintEvent sẽ gây đệ quy, thay vào đó dùng
 }
 
-    // Trình xử lý sự kiện này có thể được thực hiện lại trong một lớp con để nhận các sự kiện sơn được thông qua trong "sự kiện" đó.
+// Trình xử lý sự kiện này có thể được thực hiện lại trong một lớp con để nhận các sự kiện sơn được thông qua trong "sự kiện" đó.
 void Widget::paintEvent(QPaintEvent *event)
 {
     (void)event; // không dùng đến
