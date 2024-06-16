@@ -41,5 +41,6 @@
         <file>Image/tile8.png</file>
         <file>Image/tileCross.png</file>
         <file>Image/Icon.ico</file>
+        <file>Image/victory.png</file>
     </qresource>
 </RCC>
