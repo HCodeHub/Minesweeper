@@ -4,9 +4,15 @@
 // Vẽ màn hình chiến thắng
 void DrawWon(const Vei2 & pos, Graphics & gfx)
 {
+
+#ifdef Q_OS_WASM
+    gfx.DrawImage(Vei2(pos.x - 360 / 2, pos.x - 360 / 2), ":/Image/victory.png");
+#else
+
     // calculate top left corner based on input (center)
     const int x = pos.x - 254 / 2;
-    const int y = pos.y - 192 / 2;
+    const int y = pos.y - 192 / 2;    
+
     gfx.PutPixel(9 + x, 6 + y, 222, 74, 0);
     gfx.PutPixel(10 + x, 6 + y, 222, 74, 0);
     gfx.PutPixel(11 + x, 6 + y, 222, 74, 0);
@@ -7624,4 +7630,6 @@ void DrawWon(const Vei2 & pos, Graphics & gfx)
     gfx.PutPixel(168 + x, 182 + y, 0, 0, 74);
     gfx.PutPixel(169 + x, 182 + y, 0, 0, 74);
     gfx.PutPixel(170 + x, 182 + y, 0, 0, 74);
+
+#endif
 }
